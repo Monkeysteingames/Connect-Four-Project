@@ -8,14 +8,40 @@
 
 /* pieces are div within game table cells: draw as colored circles */
 
-.piece {
+.player-1 {
   /* TODO: make into circles */
+  background-color: red;
   margin: 5px;
   width: 80%;
   height: 80%;
+  border-radius: 50%;
+  display: inline-block;
+  animation-name: bounce;
+  animation-timing-function: ease;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
 }
 
-/* TODO: make pieces red/blue,  depending on player 1/2 piece */
+.player-2 {
+  /* TODO: make into circles */
+  background-color: blue;
+  margin: 5px;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  display: inline-block;
+  animation-name: bounce;
+  animation-timing-function: ease;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes bounce {
+  0%    { transform: translateY(0);     }  
+  50%   { transform: translateY(-15px); }
+  100%  { transform: translateY(0);     } 
+}
+
 
 /* column-top is table row of clickable areas for each column */
 
