@@ -125,7 +125,7 @@ function handleClick(evt) {
 
   // check for tie
   const aboveZero = (val) => val > 0;
-  if (board.every(aboveZero)) {
+  if (board.every(row => row.every(aboveZero))) {
     endGame('The game ends in a draw!');
   }
 
